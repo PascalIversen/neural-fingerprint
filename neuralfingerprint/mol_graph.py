@@ -64,15 +64,14 @@ class Node(object):
 
 def graph_from_smiles_tuple(smiles_tuple):
     graph_list = [graph_from_smiles(s) for s in smiles_tuple]
+    assert len(graph_list) != 0
     big_graph = MolGraph()
     for subgraph in graph_list:
         big_graph.add_subgraph(subgraph)
 
     # This sorting allows an efficient (but brittle!) indexing later on.
-    try:
-        big_graph.sort_nodes_by_degree('atom')
-    except KeyError as e:
-        pass
+    big_graph.sort_nodes_by_degree('atom')
+    
 
         
     return big_graph
