@@ -1,10 +1,10 @@
 import autograd.numpy as np
 from autograd.scipy.misc import logsumexp
 
-from features import num_atom_features, num_bond_features
-from util import memoize, WeightsParser
-from mol_graph import graph_from_smiles_tuple, degrees
-from build_vanilla_net import build_fingerprint_deep_net, relu, batch_normalize
+from .features import num_atom_features, num_bond_features
+from .util import memoize, WeightsParser
+from .mol_graph import graph_from_smiles_tuple, degrees
+from .build_vanilla_net import build_fingerprint_deep_net, relu, batch_normalize
 
 
 def fast_array_from_list(xs):

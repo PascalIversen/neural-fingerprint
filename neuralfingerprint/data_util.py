@@ -2,8 +2,8 @@ import csv
 import numpy as np
 import numpy.random as npr
 
-from util import slicedict
-from rdkit_utils import smile_to_fp
+from .util import slicedict
+from .rdkit_utils import smile_to_fp
 
 def randomize_order(data):
     data = {k : np.array(v) for k, v in data.iteritems()} # To array for fancy indexing
