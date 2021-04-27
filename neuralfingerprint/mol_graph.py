@@ -72,9 +72,9 @@ def graph_from_smiles_tuple(smiles_tuple):
     try:
         big_graph.sort_nodes_by_degree('atom')
     except KeyError as e:
-        print(big_graph)
-        print(big_graph.nodes)
-        raise e
+        pass
+
+        
     return big_graph
 
 def graph_from_smiles(smiles):
