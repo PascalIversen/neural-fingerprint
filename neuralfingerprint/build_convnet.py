@@ -1,6 +1,5 @@
 import autograd.numpy as np
-from autograd.scipy.misc import logsumexp
-
+from autograd.scipy.special import logsumexp
 from .features import num_atom_features, num_bond_features
 from .util import memoize, WeightsParser
 from .mol_graph import graph_from_smiles_tuple, degrees
